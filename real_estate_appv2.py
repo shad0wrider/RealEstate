@@ -64,6 +64,8 @@ st.title("🏠 Real Estate Management System")
 
 home = st.Page("pages/home.py",title="About Project")
 
+visualize = st.Page("pages/data_visualize.py",title="Visualize Data")
+
 # ----------- Add Property -----------
 page1 =st.Page("pages/add_estate.py",title="Add New Estate")
 # ----------- View Properties -----------
@@ -78,6 +80,6 @@ page4 =st.Page("pages/update_estate.py",title="Update Estates")
 # ----------- Delete Property -----------
 page5 =st.Page("pages/delete_estate.py",title="Delete Estate")
 
-mainpage = st.navigation([home,page1,page2,page3,page4,page5])
+mainpage = st.navigation([home,page1,page2,page3,page4,page5,visualize])
 
 mainpage.run()
