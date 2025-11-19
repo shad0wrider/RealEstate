@@ -9,5 +9,6 @@ new_area = st.number_input("New Area (sqft)", min_value=0.0)
 if st.button("Update"):
     if len(pid) == 0:
         st.error("Estate ID cannot be empty ")
-    estate.update_estate(int(pid), new_price, new_area)
-    st.success("✅ Estate updated successfully!")
+    else:
+        estate.update_estate(int(pid), new_price, new_area)
+        st.success("✅ Estate updated successfully!")
