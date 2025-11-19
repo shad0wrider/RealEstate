@@ -2,7 +2,7 @@ import streamlit as st
 
 import real_estate_appv2 as estate
 
-import folium as failed
+import folium as mapbuild
 import api , json
 from streamlit.components.v1 import html
 
@@ -30,8 +30,8 @@ if st.button("Show Location On Map"):
                 longitude = get_latlong[0]["lon"]
                 place_name = get_latlong[0]["display_name"]
 
-                m = failed.Map(location=[latitude,longitude], zoom_start=23)
-                failed.Marker([longitude,latitude], popup=place_name).add_to(m)
+                m = mapbuild.Map(location=[latitude,longitude], zoom_start=23)
+                mapbuild.Marker([longitude,latitude], popup=place_name).add_to(m)
                 html_string = m._repr_html_()  # Get the HTML representation of the map
                 html(html_string, height=500)
 
