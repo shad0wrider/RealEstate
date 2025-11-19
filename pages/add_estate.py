@@ -8,10 +8,10 @@ from streamlit.components.v1 import html
 
 
 st.subheader("Add New Estate")
-name = st.text_input("Estate Name",max_chars=3)
-location = st.text_input("Location",max_chars=3)
-price = st.number_input("Price (₹)", min_value=1.0, step=1000.0)
-area = st.number_input("Area (sqft)", min_value=1.0,step=50.0)
+name = st.text_input("Estate Name")
+location = st.text_input("Location")
+price = st.number_input("Price (₹)", min_value=1000.0, step=1000.0)
+area = st.number_input("Area (sqft)", min_value=10.0,step=50.0)
 ptype = st.selectbox("Estate Type", ["Flat", "Villa", "Plot", "Other"])
 
 
@@ -42,5 +42,8 @@ if st.button("Show Location On Map"):
 
 
 if st.button("Add Estate"):
-    estate.add_estate(name, location, price, area, ptype)
-    st.success("✅ Estate added successfully!")
+    if len(name) and len(location) > 0:
+        estate.add_estate(name, location, price, area, ptype)
+        st.success("✅ Estate added successfully!")
+    else:
+        st.error("Above Fields cannot be empty")
