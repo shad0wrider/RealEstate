@@ -4,7 +4,7 @@ import pandas as pd
 
 # ---------- Database Connection ----------
 def get_connection():
-    return sql.connect("/home/ubuntu/real_estate/db.db")
+    return sql.connect("db.db")
 
 # ---------- Database Functions ----------
 def add_estate(name, location, price, area, ptype):

@@ -12,13 +12,15 @@ cities = data["location"].unique()
 
 # selector = st.selectbox("Select City",cities)
 
-cities = data["location"].unique()
+price = data["price"]
 
-all_price = data.groupby("location")["price"].value_counts()
+feet = data["area_sqft"]
 
-all_feet = data.groupby("location")["area_sqft"].value_counts()
+data["avg_price"] = price//feet
 
 
-fig = plot.bar(all_price,all_feet)
+new = data.groupby("location")["avg_price"].mean()
 
-plot.show()
+
+
+plot.boxplot(new)
