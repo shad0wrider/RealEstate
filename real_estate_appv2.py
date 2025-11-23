@@ -29,6 +29,12 @@ def get_estate_by_id(pid):
     con.close()
     return df
 
+def get_all_estates():
+    con = get_connection()
+    data = pd.read_sql(f"SELECT * from properties",con)
+    con.close()
+    return data
+
 def update_estate(pid, price, area):
     con = get_connection()
     cur = con.cursor()
