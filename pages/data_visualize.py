@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib as mp
 import numpy as np
 
-dataframe = pd.DataFrame(
-    np.random.randn(10, 20),
-    columns=('col %d' % i for i in range(20)))
-st.bar_chart(dataframe)
+import real_estate_appv2 as estate
 
+dataframe = pd.DataFrame(estate.get_all_estates())
+
+st.bar_chart(dataframe)
