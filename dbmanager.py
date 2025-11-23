@@ -1,6 +1,6 @@
 import sqlite3 as sql
 from sqlite3 import OperationalError , DatabaseError
-import os 
+import os , time
 
 
 def create_db(name:str):
@@ -21,8 +21,9 @@ def db_shell(db_file="path"):
         try:
             maincon = sql.connect(os.path.abspath(db_file))
             tmp = input("sql> ")
-            if tmp.startswith(("INSERT","UPDATE","CREATE")):
+            if tmp.startswith(("INSERT","UPDATE","DELETE","CREATE")):
                 runit = maincon.execute(tmp)
+                maincon.commit()
 
             elif tmp =="quit":
                 return main()
@@ -33,6 +34,7 @@ def db_shell(db_file="path"):
                 print(runit.fetchall())
         except OperationalError as ie:
             print(ie,"Happened")
+            time.sleep(3)
             return main()
 
 

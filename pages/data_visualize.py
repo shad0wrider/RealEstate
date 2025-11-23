@@ -7,4 +7,4 @@ import real_estate_appv2 as estate
 
 dataframe = pd.DataFrame(estate.get_all_estates())
 
-st.bar_chart(dataframe)
+print(dataframe)
