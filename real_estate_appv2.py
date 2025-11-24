@@ -7,10 +7,7 @@ import pandas as pd
 st.set_page_config(page_title="🏠 Real Estate Management System", layout="centered")
 
 st.title("🏠 Real Estate Management System")
-# menus = ["Add Property", "View Properties", "Search Property", "Update Property", "Delete Property"]
-# choice = st.sidebar.radio("Navigation", menus )
 
-# page1,page2,page3,page4,page5 = st.columns(5)
 
 home = st.Page("pages/home.py",title="About Project")
 
