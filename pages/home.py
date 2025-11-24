@@ -16,6 +16,16 @@ st.markdown("""
             
 ### `Hosted on GCP and nginx reverse proxy :)`
 ---
-## Functions Used:
-         
-            """)
+## Group Members
+
+- #### Advait Marathe
+- #### Praneel Chhabria
+- #### Vivaan Vora
+- #### Samidha Jagtap
+- #### Siddarth Joshi
+---
+## Project Source Code
+- ### [Github Link](https://github.com/shad0wrider/RealEstate)
+ 
+""")
+
