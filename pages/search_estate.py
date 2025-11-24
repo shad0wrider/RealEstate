@@ -1,6 +1,6 @@
 import streamlit as st
 
-import real_estate_appv2 as estate
+import dbfunc as estate
 
 st.subheader("Search Estate by ID")
 pid = st.number_input("Enter Estate ID", min_value=1, step=1)

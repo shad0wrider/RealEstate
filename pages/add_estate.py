@@ -1,6 +1,6 @@
 import streamlit as st
 
-import real_estate_appv2 as estate
+import dbfunc as estate
 
 import folium as mapbuild
 import api , json

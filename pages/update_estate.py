@@ -1,6 +1,6 @@
 import streamlit as st
 
-import real_estate_appv2 as estate
+import dbfunc as estate
 
 st.subheader("Update Estate Details")
 pid = st.text_input("Enter Estate ID to Update")

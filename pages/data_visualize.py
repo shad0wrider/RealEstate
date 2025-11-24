@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib as mp
 import plotly.express as fancyplot
 
-import real_estate_appv2 as estate
+import dbfunc as estate
 
 data = estate.get_all_estates()
 

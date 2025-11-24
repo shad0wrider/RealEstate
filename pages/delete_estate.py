@@ -1,6 +1,6 @@
 import streamlit as st
 
-import real_estate_appv2 as estate
+import dbfunc as estate
 
 st.subheader("Delete Estate")
 pid = st.number_input("Enter Estate ID to Delete",min_value=0)
