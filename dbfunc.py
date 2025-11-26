@@ -42,6 +42,12 @@ def update_estate(pid, price, area):
     con.commit()
     con.close()
 
+def get_estate_by_name(name:str):
+    con = get_connection()
+    f = pd.read_sql(f"SELECT * FROM properties where name='{name}'",con)
+    return f
+
+
 def delete_estate(pid):
     con = get_connection()
     cur = con.cursor()

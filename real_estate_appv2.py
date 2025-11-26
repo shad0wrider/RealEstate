@@ -4,9 +4,9 @@ import pandas as pd
 
 
 # ---------- Streamlit Frontend ----------
-st.set_page_config(page_title="🏠 Real Estate Management System", layout="centered")
+st.set_page_config(page_title="🏠 Real Estate Visualizer", layout="centered")
 
-st.title("🏠 Real Estate Management System")
+st.title("🏠 Real Estate Visualizer")
 
 
 home = st.Page("pages/home.py",title="About Project")

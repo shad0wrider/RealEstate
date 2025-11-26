@@ -2,11 +2,11 @@ import streamlit as st
 
 import dbfunc as estate
 
-st.subheader("Search Estate by ID")
-pid = st.number_input("Enter Estate ID", min_value=1, step=1)
+st.subheader("Search Estate by Name")
+name = st.text_input("Enter Estate Name")
 if st.button("Search"):
-    data = estate.get_estate_by_id(pid)
+    data = estate.get_estate_by_name(name)
     if data.empty:
-        st.error("❌ No Estate found with that ID.")
+        st.error("❌ No Estate found with that Name.")
     else:
         st.dataframe(data)
