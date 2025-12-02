@@ -35,3 +35,28 @@ counter.columns = ["property_type","count"]
 fig = fancyplot.pie(counter,names="property_type",values="count")
 
 st.plotly_chart(fig)
+
+
+# -------- Scatterplot and Heatmap --------
+
+
+
+# Create a heatmap
+
+if st.button("Advanced Graphs"):
+
+    fig = fancyplot.density_heatmap(data, x="location", y="property_type", z="price", 
+                            hover_data=["name", "area_sqft"], color_continuous_scale="Viridis")
+
+    fig.update_layout(title="Price Heatmap by Location and Property Type",
+                    xaxis_title="Location",
+                    yaxis_title="Property Type")
+
+    st.plotly_chart(fig)
+
+    fig = fancyplot.scatter(data, x='area_sqft', y='price', color='location',
+                 title='Price vs Area for Different Properties',
+                 labels={'area_sqft': 'Area (sq ft)', 'price': 'Price (in ₹)', 'location': 'Location'})
+    
+    st.plotly_chart(fig)
+
