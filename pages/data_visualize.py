@@ -40,9 +40,6 @@ st.plotly_chart(fig)
 # -------- Scatterplot and Heatmap --------
 
 
-
-# Create a heatmap
-
 if st.button("Advanced Graphs"):
 
     fig = fancyplot.density_heatmap(data, x="location", y="property_type", z="price", 
